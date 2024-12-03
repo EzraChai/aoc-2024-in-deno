@@ -7,7 +7,6 @@ if (fileInfo.isFile) {
   file.readSync(buf);
   text = new TextDecoder().decode(buf);
 }
-// console.log(text)
 
 let sum = 0;
 
@@ -16,17 +15,16 @@ const regex = /mul\(([0-9999]+),([0-9999]+)\)|don't\(\)|do\(\)/g;
 let doCondition = true;
 
 text.matchAll(regex)?.forEach((item) => {
-
-    if(item[0] === "don't()") {
-        doCondition = false;
-    }else if(item[0] === "do()"){
-        doCondition = true;
-    }else {
-       if(doCondition === true){
-        const mul = +item[1] * +item[2];
-        sum += mul;
-      }
+  if (item[0] === "don't()") {
+    doCondition = false;
+  } else if (item[0] === "do()") {
+    doCondition = true;
+  } else {
+    if (doCondition === true) {
+      const mul = +item[1] * +item[2];
+      sum += mul;
     }
-})
+  }
+});
 
-console.log(sum)
+console.log(sum);

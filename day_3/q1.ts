@@ -7,14 +7,13 @@ if (fileInfo.isFile) {
   file.readSync(buf);
   text = new TextDecoder().decode(buf);
 }
-// console.log(text)
 
 let sum = 0;
 
 const regex = /mul\(([0-9999]+),([0-9999]+)\)/g;
 text.matchAll(regex)?.forEach((item) => {
-    const mul = +item[1] * +item[2];
-    sum += mul;
-})
+  const mul = +item[1] * +item[2];
+  sum += mul;
+});
 
-console.log(sum)
+console.log(sum);
