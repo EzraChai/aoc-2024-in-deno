@@ -64,11 +64,8 @@ text.split("\n").forEach((line) => {
           total.toString() + cloneListNum[i][j + 1].toString()
         );
         total = newElement;
-        cloneListNum[i][j] = newElement;
-        cloneListNum[i].splice(j + 1, 1);
-        comboArr.splice(j, 1);
-      }
-      if (comboArr[j] === "*") {
+        cloneListNum[i][j + 1] = newElement;
+      } else if (comboArr[j] === "*") {
         total *= cloneListNum[i][j + 1];
       } else if (comboArr[j] === "+") {
         total += cloneListNum[i][j + 1];
