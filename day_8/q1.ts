@@ -12,7 +12,7 @@ let sum = 0;
 
 // console.log(text);
 const arr = new Array<Array<string>>();
-let ar = text.split("\n");
+const ar = text.split("\n");
 ar.forEach((ar2, index) => {
   arr[index] = ar2.split("");
 });
@@ -52,7 +52,7 @@ for (let y = 0; y < arr.length; y++) {
   }
 }
 for (let i = 0; i < arr.length; i++) {
-  let newArr = arr[i].join("");
+  const newArr = arr[i].join("");
   console.log(newArr);
 }
 
