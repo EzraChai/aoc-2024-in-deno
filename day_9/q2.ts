@@ -34,7 +34,7 @@ for (let num = counter - 1; num > 0; num--) {
   const lastNumIndex = arr2.findLastIndex((el) => +el === num);
   // console.log("LAST: ", lastNumIndex);
   const lastNonNumIndex = arr2.findLastIndex(
-    (el, index) => +el !== num && index < lastNumIndex
+    (el, index) => +el !== num && index < lastNumIndex,
   );
   // console.log("NON: ", lastNonNumIndex);
   const numLength = lastNumIndex - lastNonNumIndex;

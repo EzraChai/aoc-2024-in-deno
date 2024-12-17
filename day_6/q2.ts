@@ -62,7 +62,7 @@ while (
           cloneposition,
           clonexPoint,
           cloneyPoint,
-          cloneCurrentDirection
+          cloneCurrentDirection,
         );
       }
       position[yPoint][xPoint] = "X";
@@ -90,7 +90,7 @@ while (
           cloneposition,
           clonexPoint,
           cloneyPoint,
-          cloneCurrentDirection
+          cloneCurrentDirection,
         );
       }
       position[yPoint][xPoint] = "X";
@@ -117,7 +117,7 @@ while (
           cloneposition,
           clonexPoint,
           cloneyPoint,
-          cloneCurrentDirection
+          cloneCurrentDirection,
         );
       }
       position[yPoint][xPoint] = "X";
@@ -146,7 +146,7 @@ while (
           cloneposition,
           clonexPoint,
           cloneyPoint,
-          cloneCurrentDirection
+          cloneCurrentDirection,
         );
       }
       position[yPoint][xPoint] = "X";
@@ -165,7 +165,7 @@ function testObstruction(
   pos: Array<Array<string>>,
   x: number,
   y: number,
-  currentDirection2: Direction
+  currentDirection2: Direction,
 ): void {
   switch (Number(currentDirection2)) {
     case Direction.Up:

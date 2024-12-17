@@ -52,7 +52,8 @@ text.split("\n").forEach((line) => {
     }
 
     if (
-      incount < decount && incount === 1 && (incount + decount) === arr.length - 1
+      incount < decount && incount === 1 &&
+      (incount + decount) === arr.length - 1
     ) {
       if (arr[iindex - 1] < arr[iindex]) {
         arr.splice(iindex, 1);
@@ -72,7 +73,6 @@ text.split("\n").forEach((line) => {
         arr.splice(dindex, 1);
       }
       removeCount++;
-
     } else {
       safe = false;
     }
@@ -88,12 +88,14 @@ text.split("\n").forEach((line) => {
       }
     }
 
-    if (incount >= 1 && decount >= 1 && (decount + incount) === arr.length - 1) {
+    if (
+      incount >= 1 && decount >= 1 && (decount + incount) === arr.length - 1
+    ) {
       safe = false;
     }
-    
-    if(safe){
-      console.log(arr)
+
+    if (safe) {
+      console.log(arr);
     }
   }
 
@@ -136,7 +138,7 @@ text.split("\n").forEach((line) => {
   }
 
   if (safe) {
-    console.log(arr)
+    console.log(arr);
     sumOfSafeReports++;
   }
 });
